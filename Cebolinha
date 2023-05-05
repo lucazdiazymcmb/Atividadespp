@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include <string.h>
+
+int main(){
+    char string_s[100];
+    int  tamanho;
+
+    printf("Digite uma string: ");
+    fgets(string_s, 100, stdin);
+    setbuf(stdin, NULL);
+
+    tamanho = strlen(string_s);
+    if(string_s[tamanho] == '\n'){
+        string_s[tamanho] = ' ';
+    }
+    for(int i = 0; i < tamanho - 2; i++){
+
+        if(string_s[i] == 'r' || string_s[i] == 'R'){
+            if(string_s[i + 1] == 'r'){
+                for(int j = i; j < tamanho - 1; j++){
+                    string_s[j] = string_s[j+1];
+                    tamanho = strlen(string_s);
+                }
+
+            }
+            if(i != (tamanho -1)){
+                string_s[i] = 'l';
+                else if (int i = 0; i < tamanho-1){
+                
+            }else{
+                continue;
+            }
+            }
+    }
+    }
+
+    fputs(string_s, stdout);
+
+
+    return 0;
+}
