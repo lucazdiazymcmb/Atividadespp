@@ -24,7 +24,6 @@ int exibirMenu() {
     return opcao;
 }
 
-// Função para criar o arquivo de dados
 void criarArquivo() {
     FILE *arquivo = fopen("dados.bin", "wb");
     if (arquivo == NULL) {
